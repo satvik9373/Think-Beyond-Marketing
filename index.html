@@ -642,42 +642,80 @@
                                         </div>
                                     </header>
 
-                                    <!-- mobile-menu-start -->
-                                    <div class="mobile-menu lenis lenis-smooth">
-                                        <div class="mobile-menu-wrap">
-                                            <div class="mobile-menu-bg">
-                                                <span class="span1"></span>
-                                                <span class="span2"></span>
-                                            </div>
+                                  <!-- Mobile Menu Button -->
+<button type="button" aria-label="name" class="gly-mobile-menu-btn-2" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
-                                            <div class="mobile-menu-logo-wrap mb-100">
-                                                <a href="https://themexriver.com/wp/gilroy/" class="mobile-menu-logo d-block" aria-label="Site Logo">
+<!-- Mobile Menu -->
+<div class="mobile-menu lenis lenis-smooth" id="mobileMenu">
+    <div class="mobile-menu-wrap">
+        <div class="mobile-menu-bg">
+            <span class="span1"></span>
+            <span class="span2"></span>
+        </div>
+
+        <div class="mobile-menu-logo-wrap mb-100">
+            <a href="https://themexriver.com/wp/gilroy/" class="mobile-menu-logo d-block" aria-label="Site Logo">
                 <img src="/logo.png" alt="">
             </a>
 
-                                                <div class="mobile-menu-close" id="menuToggle2">
-                                                   <img src="/close.png" width="40" height="40" alt="">
-                                                </div>
-                                            </div>
+            <div class="mobile-menu-close" id="menuToggle2">
+                <img src="/close.png" width="40" height="40" alt="">
+            </div>
+        </div>
 
-                                            <div class="mobile-menu-inner">
-
-                                                <div class="mobile-menu-inner-left">
-                                                    <!-- mobile-menu-list -->
-                                                    <div class="mobile-menu-navigation">
-                                                        <nav class="mobile-main-navigation  clearfix ul-li">
-                                                            <div class="menu-one-page-menu-container">
-                                                                <ul id="m-main-nav" class="nav navbar-nav clearfix list-unstyled">
-                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2382"><a href="#home">Home</a></li>
-                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2383"><a href="#about">About</a></li>
-                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2384"><a href="#services">Services</a></li>
-                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2386"><a href="#contact">Contact Us</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </nav>
-                                                    </div>
-                                                </div>
-
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-inner-left">
+                <!-- Mobile Menu List -->
+                <div class="mobile-menu-navigation">
+                    <nav class="mobile-main-navigation clearfix ul-li">
+                        <div class="menu-one-page-menu-container">
+                            <ul id="m-main-nav" class="nav navbar-nav clearfix list-unstyled">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2382"><a href="#home">Home</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2383"><a href="#about">About</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2384"><a href="#services">Services</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2386"><a href="#contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.getElementById('menuToggle');
+        const menuCloseButton = document.getElementById('menuToggle2');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuLinks = document.querySelectorAll('#m-main-nav a');
+    
+        // Function to toggle the mobile menu
+        const toggleMenu = () => {
+            mobileMenu.classList.toggle('open');
+        };
+    
+        // Function to close the mobile menu
+        const closeMenu = () => {
+            mobileMenu.classList.remove('open');
+        };
+    
+        // Attach click event to the menu toggle button
+        menuToggle.addEventListener('click', toggleMenu);
+    
+        // Attach click event to the menu close button
+        menuCloseButton.addEventListener('click', closeMenu);
+    
+        // Attach click event to each menu link to close the menu when clicked
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    });
+    </script>
+    
                                             
                                     <!-- mobile-menu-end -->
 
@@ -737,7 +775,7 @@
 
 
                                                 <!-- chat-btn -->
-                                                <a class="gly-chat-btn-1" href="https://themexriver.com/wp/gilroy/contact-us/" target="_self" rel="" aria-label="Button">
+                                                <a class="gly-chat-btn-1" href="contact-us.html" target="_self" rel="" aria-label="Button">
             <img src="/comment.png" width="30" height="30" alt="">              <span class="text">
                     Let’s Talk                </span>
             </a>
@@ -1242,7 +1280,7 @@ team delivers measurable results, enhancing your online presence and driving gro
                                             </span><span class="price">₹22,000                                       </span>
                                                                             <br> Meta ads </h3>
 
-                                                                        <a class="gly-pr-btn-1" href="https://themexriver.com/wp/gilroy/contact-us/" target="_self" rel="" aria-label="name">
+                                                                        <a class="gly-pr-btn-1" href="./contact-us.html" target="_self" rel="" aria-label="name">
                                         <span class="text">Connect With Us</span>
                                                                             </a>
                                                                     </div>
@@ -1266,7 +1304,7 @@ team delivers measurable results, enhancing your online presence and driving gro
                                           </span><span class="price">₹25,000                                       </span>
                                                                             <br> Google ads </h3>
 
-                                                                        <a class="gly-pr-btn-1" href="https://themexriver.com/wp/gilroy/contact-us/" target="_self" rel="" aria-label="name">
+                                                                        <a class="gly-pr-btn-1" href="./contact-us.html" target="_self" rel="" aria-label="name">
                                         <span class="text">Connect With Us</span>
                                                                             </a>
                                                                     </div>
@@ -1293,7 +1331,7 @@ team delivers measurable results, enhancing your online presence and driving gro
                                           </span><span class="price">₹5000                                       </span>
                                                                             <br> Funnel development </h3>
 
-                                                                        <a class="gly-pr-btn-1" href="https://themexriver.com/wp/gilroy/contact-us/" target="_self" rel="" aria-label="name">
+                                                                        <a class="gly-pr-btn-1" href="./contact-us.html" target="_self" rel="" aria-label="name">
                                         <span class="text">Connect With Us</span>
                                                                             </a>
                                                                     </div>
@@ -1312,7 +1350,7 @@ team delivers measurable results, enhancing your online presence and driving gro
                                                             </div>
                                                         </div>
 
-                                                        <a href="https://themexriver.com/wp/gilroy/about/" target="_self" rel="" aria-label="explore more" class="gly-pr-btn-1 mt-45">
+                                                        <a href="#about" target="_self" rel="" aria-label="explore more" class="gly-pr-btn-1 mt-45">
                         <span class="text">
                             explore more                        </span>
                                             </a>
@@ -1467,7 +1505,7 @@ team delivers measurable results, enhancing your online presence and driving gro
                                                             Ready To Work With Us? </h3>
                                                     </div>
 
-                                                    <a class="gly-pr-btn-1 tx-button" href="https://themexriver.com/wp/gilroy/about/" target="_self" rel="">
+                                                    <a class="gly-pr-btn-1 tx-button" href="#about" target="_self" rel="">
                         <span class="text">
                             Explore More                        </span>
                                             </a>
